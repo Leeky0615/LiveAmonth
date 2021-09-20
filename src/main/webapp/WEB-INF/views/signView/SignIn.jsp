@@ -24,10 +24,10 @@
                         <span id="password-field" class="fa fa-fw fa-eye field-icon"></span>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="form-control btn btn-primary rounded submit px-3">로그인</button>
+                        <button type="submit" class="form-control btn btn-primary rounded submit px-3" style="font-size: 20px; padding: 5px 20px" >로그인</button>
                     </div>
                     <div class="form-group">
-                        <a href= ${apiURL}><img src="resources/img/naverLogin_btn.png" height="50px"/></a>
+                        <a href= ${apiURL} ><img src="resources/img/naverLogin_btn.png" height="50px"/></a>
                     </div>
                     <c:if test="${!firstIn}">
                         <p class="text-center" style="color:#ff0000">가입하지 않은 아이디이거나, 잘못된 비밀번호입니다.</p>

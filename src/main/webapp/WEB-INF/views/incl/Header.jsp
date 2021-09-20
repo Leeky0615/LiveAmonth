@@ -34,84 +34,84 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="logo">
-                        <a href="/"><img src="resources/img/logo_kr.png" alt=""></a>
+                        <a href="/"><img src="resources/img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
                     <c:if test="${userVO.userNO != null}">
-                        <script>
-                            window.onload = function () {
-                                $.ajax({
-                                    url: "getAllNotice",
-                                    type: "GET",
-                                    data: {userNO: ${userVO.userNO}},
-                                    success:
-                                        function (noticeMap) {
-                                            writeDropDwon(noticeMap);
-                                        },
-                                    error:
-                                        function (request, status, error) {
-                                        }
-                                });
-                            }
-                            $(function () {
-                                timer = setInterval(function () {
-                                    if ($(":focus").attr("id") != "alertsDropdown") {
-                                        $.ajax({
-                                            url: "getAllNotice",
-                                            type: "GET",
-                                            data: {userNO: ${userVO.userNO}},
-                                            success:
-                                                function (noticeMap) {
-                                                    writeDropDwon(noticeMap);
-                                                },
-                                            error:
-                                                function (request, status, error) {
-                                                }
-                                        });
-                                    }
-                                }, 1000);
-                            });
+<%--                        <script>--%>
+<%--                            window.onload = function () {--%>
+<%--                                $.ajax({--%>
+<%--                                    url: "getAllNotice",--%>
+<%--                                    type: "GET",--%>
+<%--                                    data: {userNO: ${userVO.userNO}},--%>
+<%--                                    success:--%>
+<%--                                        function (noticeMap) {--%>
+<%--                                            writeDropDwon(noticeMap);--%>
+<%--                                        },--%>
+<%--                                    error:--%>
+<%--                                        function (request, status, error) {--%>
+<%--                                        }--%>
+<%--                                });--%>
+<%--                            }--%>
+<%--                            $(function () {--%>
+<%--                                timer = setInterval(function () {--%>
+<%--                                    if ($(":focus").attr("id") != "alertsDropdown") {--%>
+<%--                                        $.ajax({--%>
+<%--                                            url: "getAllNotice",--%>
+<%--                                            type: "GET",--%>
+<%--                                            data: {userNO: ${userVO.userNO}},--%>
+<%--                                            success:--%>
+<%--                                                function (noticeMap) {--%>
+<%--                                                    writeDropDwon(noticeMap);--%>
+<%--                                                },--%>
+<%--                                            error:--%>
+<%--                                                function (request, status, error) {--%>
+<%--                                                }--%>
+<%--                                        });--%>
+<%--                                    }--%>
+<%--                                }, 1000);--%>
+<%--                            });--%>
 
-                            $(document).ready(function () {
-                                $(".dropdown").on("hidden.bs.dropdown", function () {
-                                    $.ajax({
-                                        url: "updateReadStatus",
-                                        type: "POST",
-                                        data: {userNO: ${userVO.userNO}},
-                                        success: function (data) {
-                                            $.ajax({
-                                                url: "getAllNotice",
-                                                type: "GET",
-                                                data: {userNO: ${userVO.userNO}},
-                                                success:
-                                                    function (noticeMap) {
-                                                        writeDropDwon(noticeMap);
-                                                    },
-                                                error:
-                                                    function (request, status, error) {
-                                                    }
-                                            });
-                                        },
-                                        error: function (request, status, error) {
-                                        }
-                                    });
-                                })
-                            });
+<%--                            $(document).ready(function () {--%>
+<%--                                $(".dropdown").on("hidden.bs.dropdown", function () {--%>
+<%--                                    $.ajax({--%>
+<%--                                        url: "updateReadStatus",--%>
+<%--                                        type: "POST",--%>
+<%--                                        data: {userNO: ${userVO.userNO}},--%>
+<%--                                        success: function (data) {--%>
+<%--                                            $.ajax({--%>
+<%--                                                url: "getAllNotice",--%>
+<%--                                                type: "GET",--%>
+<%--                                                data: {userNO: ${userVO.userNO}},--%>
+<%--                                                success:--%>
+<%--                                                    function (noticeMap) {--%>
+<%--                                                        writeDropDwon(noticeMap);--%>
+<%--                                                    },--%>
+<%--                                                error:--%>
+<%--                                                    function (request, status, error) {--%>
+<%--                                                    }--%>
+<%--                                            });--%>
+<%--                                        },--%>
+<%--                                        error: function (request, status, error) {--%>
+<%--                                        }--%>
+<%--                                    });--%>
+<%--                                })--%>
+<%--                            });--%>
 
-                        </script>
+<%--                        </script>--%>
                         <div class="ht-widget navbar navbar-expand navbar-light bg-white topbar">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item dropdown no-arrow mx-1">
-                                    <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i id="noticeIcon" class="fas fa-bell fa-fw"></i>
-                                        <span class="badge badge-danger badge-counter" id="noticeCount"></span>
-                                    </a>
-                                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" id="noticeDropdown" aria-labelledby="alertsDropdown">
-                                    </div>
-                                </li>
-                            </ul>
+<%--                            <ul class="navbar-nav ml-auto">--%>
+<%--                                <li class="nav-item dropdown no-arrow mx-1">--%>
+<%--                                    <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"--%>
+<%--                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--%>
+<%--                                        <i id="noticeIcon" class="fas fa-bell fa-fw"></i>--%>
+<%--                                        <span class="badge badge-danger badge-counter" id="noticeCount"></span>--%>
+<%--                                    </a>--%>
+<%--                                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" id="noticeDropdown" aria-labelledby="alertsDropdown">--%>
+<%--                                    </div>--%>
+<%--                                </li>--%>
+<%--                            </ul>--%>
                             <a href="logout" class="hw-btn">Logout</a>
                         </div>
                     </c:if>

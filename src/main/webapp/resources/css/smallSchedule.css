@@ -16,7 +16,7 @@
 
 .calendar-header-day {
     width: calc(14.286%);
-    background-color: #00C89E;
+    background-color: #3D747D;
     border-bottom: 1px solid #FFFFFF;;
     color: #FFFFFF;
 }
@@ -101,7 +101,7 @@
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.5;
-    color: rgba(1, 121, 99, 0.82);
+    color: #488993;
     box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
 }
 .scheduleContentLabel{
@@ -111,11 +111,11 @@
     font-size: 25px;
     text-align: left;
     color: #ffffff;
-    background-color: #00C89E;
+    background-color: #488993;
     letter-spacing: .1em;
     text-shadow:
-            -1px -1px 1px #34746a,
-            2px 2px 1px #7af3d5;
+            -1px -1px 1px #4D939E,
+            2px 2px 1px #3B7078;
 }
 
 

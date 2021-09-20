@@ -143,6 +143,19 @@ input[type=radio]:checked + label {
 }
 
 .bttn-material-flat.bttn-success {
-    background: #28b78d;
-    color: #fff;
+    color: #135762;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    background: #ffffff;
+    text-transform: uppercase;
+    transition: all 0.1s ease-in-out;
+    box-shadow: -6px -6px 5px rgba(228, 226, 226, 0.8), 3px 3px 10px rgba(228, 226, 226, 0.8);
+    display: inline-block;
+    border-radius: 25px;
+}
+.bttn-material-flat.bttn-success:hover {
+    box-shadow: inset -3px -3px 5px rgba(225,225,225,0.5),
+    inset 8px 0px 16px rgba(0,0,0,0.1);
+    color: #ffffff;
+    background-color: #135762;
 }

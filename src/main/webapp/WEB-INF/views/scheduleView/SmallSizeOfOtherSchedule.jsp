@@ -59,19 +59,19 @@
                 </div>
                 <c:if test="${scheduleStatus == true}">
                 <script>
-                    $('.contents').parent('td#${listIndex}_${dateList.date}').css('background-color', '#00C89E');
+                    $('.contents').parent('td#${listIndex}_${dateList.date}').css('background-color', '#4D939E');
                     $('.contents').parent('td#${listIndex}_${dateList.date}').css('font-weight', 'bold');
                     $('.contents').parent('td#${listIndex}_${dateList.date}').css('color', '#e1edea');
                     $('.contents').parent('td#${listIndex}_${dateList.date}').attr("name", 'Contents');
                     $('td#${listIndex}_${dateList.date}').hover(function (e) {
-                        $('td#${listIndex}_${dateList.date}').css('color', '#00C89E');
+                        $('td#${listIndex}_${dateList.date}').css('color', '#4D939E');
                         $('td#${listIndex}_${dateList.date}').css('background-color', '#e1edea');
                         $("#${listIndex}_${dateList.date}_modal").css('left', e.offsetX + 20);
                         $("#${listIndex}_${dateList.date}_modal").css('top', e.offsetY + 5);
                         $("#${listIndex}_${dateList.date}_modal").css('display', 'block');
                     }, function (e) {
                         $('td#${listIndex}_${dateList.date}').css('color', '#e1edea');
-                        $('td#${listIndex}_${dateList.date}').css('background-color', '#00C89E');
+                        $('td#${listIndex}_${dateList.date}').css('background-color', '#4D939E');
                         $("#${listIndex}_${dateList.date}_modal").css('display', 'none');
                     });
                 </script>
