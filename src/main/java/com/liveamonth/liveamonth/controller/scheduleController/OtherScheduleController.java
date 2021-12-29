@@ -51,7 +51,7 @@ public class OtherScheduleController extends SuperController {
         HashMap<String, Object> filtersAndOrder = this.makeFiltersAndOrder(request, request.getParameter(SCHEDULE_ACTION.getText()));
 
         // paging
-        int selectPage = super.getSelectePage(request);
+        int selectPage = super.getSelectPage(request);
         PagingDTO paging = scheduleService.showOtherScheduleListPaging(filtersAndOrder, selectPage);
         model.addAttribute(PAIGING.getText(), paging);
 
@@ -74,7 +74,7 @@ public class OtherScheduleController extends SuperController {
         int scheduleNO = Integer.parseInt(request.getParameter(SCHEDULE_NO.getText()));
         model.addAttribute(SCHEDULE_NO.getText(), scheduleNO);
 
-        int selectPage = super.getSelectePage(request);
+        int selectPage = super.getSelectPage(request);
         try {
             scheduleService.increaseScheduleViewCount(scheduleNO);
         } catch (Exception e) {

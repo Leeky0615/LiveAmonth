@@ -77,7 +77,7 @@ public class SuperController {
         model.addAttribute(MY_REVIEW_LIST.getText(), reviewList);
         model.addAttribute(MANAGE_REVIEW_CATEGORY.getText(), manageReviewCategory);
     }
-    public int getSelectePage(HttpServletRequest request){
+    public int getSelectPage(HttpServletRequest request){
         if (request.getParameter(SELECTED_PAGE.getText()) != null) {
             return Integer.parseInt(request.getParameter(SELECTED_PAGE.getText()));
         }else return 1;

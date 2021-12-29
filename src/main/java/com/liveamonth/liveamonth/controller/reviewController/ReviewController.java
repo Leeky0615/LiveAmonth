@@ -77,7 +77,7 @@ public class ReviewController extends SuperController {
             default:
                 break;
         }
-        int selectPage = super.getSelectePage(request);
+        int selectPage = super.getSelectPage(request);
         ArrayList<HashMap<String, Object>> reviewList = reviewService.getCategoryReviewList(category, selectPage,orderBy,descAsc);
         PagingDTO paging = reviewService.showPaging(selectPage, category);
         model.addAttribute(SELECT_PAGE.getText(),selectPage);
@@ -102,7 +102,7 @@ public class ReviewController extends SuperController {
         String searchCategory = String.valueOf(request.getParameter(SEARCH_CATEGORY.getText()));
         String searchDetail = String.valueOf(request.getParameter(SEARCH_DETAIL.getText()));
 
-        int selectPage = super.getSelectePage(request);
+        int selectPage = super.getSelectPage(request);
         PagingDTO paging = reviewService.showSearchPaging(selectPage, search,searchDate,searchCategory,searchDetail);
         ArrayList<HashMap<String, Object>> reviewList = reviewService.getSearchReviewList(selectPage, search,searchDate,searchCategory,searchDetail);
         model.addAttribute(REVIEW_LIST.getText(), reviewList);
@@ -210,7 +210,7 @@ public class ReviewController extends SuperController {
             return DEFAULT_REVIEW_PAGE.getPath();
         }
 
-        int selectPage = super.getSelectePage(request);
+        int selectPage = super.getSelectPage(request);
         try {
             ArrayList<HashMap<String, Object>> reviewReplyList = reviewService.getReviewReplyList(reviewNO, selectPage);
             model.addAttribute(REVIEW_REPLY_LIST.getText(), reviewReplyList);
